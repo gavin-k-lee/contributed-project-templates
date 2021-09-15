@@ -1,6 +1,6 @@
 # For finding latest versions of the base image see
 # https://github.com/SwissDataScienceCenter/renkulab-docker
-ARG RENKU_BASE_IMAGE=renku/renkulab-vnc:0.7.7
+ARG RENKU_BASE_IMAGE=renku/renkulab-vnc:0.10.1
 FROM ${RENKU_BASE_IMAGE}
 
 # Uncomment and adapt if code is to be included in the image
@@ -27,14 +27,24 @@ RUN conda env update -q -f /tmp/environment.yml && \
 # RENKU_VERSION determines the version of the renku CLI
 # that will be used in this image. To find the latest version,
 # visit https://pypi.org/project/renku/#history.
-ARG RENKU_VERSION={{ __renku_version__ | default("0.15.1") }}
+ARG RENKU_VERSION={{ __renku_version__ | default("0.16.0") }}
 
 ########################################################
 # Do not edit this section and do not add anything below
 
+# Install renku from pypi or from github if it's a dev version
 RUN if [ -n "$RENKU_VERSION" ] ; then \
-    pipx uninstall renku && \
-    pipx install --force renku==${RENKU_VERSION} \
-    ; fi
+        source .renku/venv/bin/activate ; \
+        currentversion=$(renku --version) ; \
+        if [ "$RENKU_VERSION" != "$currentversion" ] ; then \
+            pip uninstall renku ; \
+            gitversion=$(echo "$RENKU_VERSION" | sed -n "s/^[[:digit:]]\+\.[[:digit:]]\+\.[[:digit:]]\+\(\.dev[[:digit:]]\+\)*\(+g\([a-f0-9]\+\)\)*\(+dirty\)*$/\3/p") ; \
+            if [ -n "$gitversion" ] ; then \
+                pip install --force "git+https://github.com/SwissDataScienceCenter/renku-python.git@$gitversion" ;\
+            else \
+                pip install --force renku==${RENKU_VERSION} ;\
+            fi \
+        fi \
+    fi
 
 ########################################################
