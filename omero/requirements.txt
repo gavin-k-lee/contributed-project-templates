@@ -1,0 +1,4 @@
+napari
+pandas
+omero-py==5.10.0
+ezomero==0.3.0

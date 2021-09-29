@@ -23,3 +23,17 @@
   description: A MATLAB client through Jupyter proxy
   variables:
     description: Describe your MATLAB project
+- folder: omero
+  name: OMERO
+  description: A test project to log into OMERO.epfl.ch
+  variables:
+    omero-login: Your OMERO login - usually your GASPAR
+- folder: R-teaching
+  name: R template for teaching
+  description: This template is used for teaching courses in R or R+Python
+  variables:
+    description: Teaching R on Renku
+    affiliation: University, institution or other agency
+    number_of_students: Approximate how many students are in your class
+    length_of_course: Approximate number of weeks your course goes for
+    memory_per_user: Approximate RAM use per student

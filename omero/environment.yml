@@ -1,0 +1,13 @@
+name: "base"
+channels:
+  - defaults
+dependencies:
+  - qtpy
+  - qtconsole
+  - scipy
+  - scikit-image
+  - vispy
+  - ipython
+  - pyopengl
+  - pyside2
+prefix: "/opt/conda"
