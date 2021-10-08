@@ -27,9 +27,9 @@
   name: OMERO
   description: A test project to log into OMERO.epfl.ch automatically
   variables:
-    omero_login: Your OMERO login - usually your GASPAR
-    hostname: Your OMERO server host name
-    hostport: Your OMERO host port
+    omero_username: Your OMERO login - usually your GASPAR
+    omero_hostname: Your OMERO server host name
+    omero_hostport: Your OMERO host port
 - folder: R-teaching
   name: R template for teaching
   description: This template is used for teaching courses in R or R+Python
