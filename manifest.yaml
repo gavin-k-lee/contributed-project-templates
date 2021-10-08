@@ -27,7 +27,7 @@
   name: OMERO
   description: A test project to log into OMERO.epfl.ch automatically
   variables:
-    omero-login: Your OMERO login - usually your GASPAR
+    omero_login: Your OMERO login - usually your GASPAR
     hostname: Your OMERO server host name
     hostport: Your OMERO host port
 - folder: R-teaching
