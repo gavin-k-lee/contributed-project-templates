@@ -10,4 +10,11 @@ dependencies:
   - ipython
   - pyopengl
   - pyside2
+  - ome::zeroc-ice36-python
+  - ome::omero-py=5.10.0
+  - pip
+  - pip:
+      - pandas
+      - napari
+      - ezomero==0.3.0
 prefix: "/opt/conda"
