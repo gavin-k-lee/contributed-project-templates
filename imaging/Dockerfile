@@ -1,6 +1,6 @@
 # For finding latest versions of the base image see
 # https://github.com/SwissDataScienceCenter/renkulab-docker
-ARG RENKU_BASE_IMAGE=renku/renkulab-vnc:0.7.7
+ARG RENKU_BASE_IMAGE=renku/renkulab-vnc:0.10.3
 FROM ${RENKU_BASE_IMAGE}
 
 USER root
