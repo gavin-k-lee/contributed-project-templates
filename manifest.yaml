@@ -42,3 +42,4 @@
 - folder: python-simple
   name: Test Updating Templates
   description: This template is for testing only
+  allow_template_update: true
