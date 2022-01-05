@@ -5,7 +5,7 @@ ARG BASE_ML_INSTALL_LOC=/tmp/matlab-install-location
 
 # For finding latest versions of the base image see
 # https://github.com/SwissDataScienceCenter/renkulab-docker
-ARG RENKU_BASE_IMAGE=renku/renkulab-py:3.9-0.10.0
+ARG RENKU_BASE_IMAGE=renku/renkulab-py:3.9-0.10.1
 
 # Replace "mathworks/matlab" with any Docker image that contains MATLAB
 # MATLAB should be available on the path in the Docker image
@@ -130,7 +130,7 @@ RUN conda env update -q -f /tmp/environment.yml && \
 # RENKU_VERSION determines the version of the renku CLI
 # that will be used in this image. To find the latest version,
 # visit https://pypi.org/project/renku/#history.
-ARG RENKU_VERSION=0.16.0
+ARG RENKU_VERSION=0.16.2
 
 ########################################################
 # Do not edit this section and do not add anything below
