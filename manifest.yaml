@@ -43,3 +43,4 @@
   name: Test Updating Templates
   description: This template is for testing only
   allow_template_update: true
+  immutable_template_files: week-6-material, Dockerfile
