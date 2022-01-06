@@ -38,6 +38,7 @@
     description: Teaching
     affiliation: University, institution or other agency
     student_number: Your university ID
+    group_members: Your team members
 - folder: python-simple
   name: Test Updating Templates
   description: This template is for testing only

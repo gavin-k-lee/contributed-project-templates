@@ -1,0 +1,50 @@
+---
+title: "homework_working"
+author: "Gavin"
+date: "1/6/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Homework scratch pad
+
+**Student number**: {{ student_number }}
+
+**Group members**: {{ group_members }}
+
+### Exercise 1
+
+Run a linear regression between any two variables in the `mtcars` dataset.
+
+```{r mtcars}
+summary(mtcars)
+```
+
+```{r lm}
+ols <- lm(mtcars$mpg ~ mtcars$cyl)
+```
+
+### Exercise 2
+
+Reverse the dependent and independent variables and run the linear model again. Compare the estimate slope variables of each of the two regressions you have performed.
+
+```{r reverse}
+reverse <- lm(mtcars$cyl ~ mtcars$mpg)
+```
+
+```{r compare}
+print(ols$coefficients[[2]])
+print(reverse$coefficients[[2]])
+```
+
+### Exercise 3
+
+Calculate the sum of the residuals of each of the regressions. What do you find?
+
+```{r resids}
+sum(ols$residuals)
+sum(reverse$residuals)
+```
