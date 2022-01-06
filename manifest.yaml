@@ -30,11 +30,12 @@
     omero_username: Your OMERO login to omero.epfl.ch. This is usually your GASPAR.
     omero_hostname: Your OMERO server host name. The default server is omero-server.epfl.ch.
     omero_hostport: Your OMERO host port. The default port is 4064.
-- folder: R-teaching
-  name: R template for teaching
-  description: This template is used for teaching courses in R or R+Python
+- folder: teaching
+  name: Template for teaching
+  description: This template is an example used for demonstrating use of R or R+Python
+  allow_template_update: true
   variables:
-    description: Teaching R on Renku
+    description: Teaching
     affiliation: University, institution or other agency
     number_of_students: Approximate how many students are in your class
     length_of_course: Approximate number of weeks your course goes for
