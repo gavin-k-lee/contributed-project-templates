@@ -35,7 +35,7 @@
   description: This template is an example used for demonstrating use of R or R+Python
   allow_template_update: true
   variables:
-    description: Teaching
+    project_description: Teaching
     affiliation: University, institution or other agency
     student_number: Your university ID
     group_members: Your team members
