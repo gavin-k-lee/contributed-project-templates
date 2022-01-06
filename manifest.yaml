@@ -37,9 +37,7 @@
   variables:
     description: Teaching
     affiliation: University, institution or other agency
-    number_of_students: Approximate how many students are in your class
-    length_of_course: Approximate number of weeks your course goes for
-    memory_per_user: Approximate RAM use per student
+    student_number: Your university ID
 - folder: python-simple
   name: Test Updating Templates
   description: This template is for testing only
